@@ -6,10 +6,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCompositionContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import java.text.DateFormatSymbols
 
 @Composable
@@ -22,7 +24,7 @@ fun CalculatorButton(
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .clip(CircleShape)
-            .clickable { onClick() }
+            .clickable { OnClick() }
             .then(modifier)
 
             ){
